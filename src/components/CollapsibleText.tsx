@@ -21,58 +21,60 @@ export default function CollapsibleText() {
 
   return (
     <div>
-      <p className="mb-4 text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight text-slate-200">
+      <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight text-slate-200">
         I'm a designer living in Ljubljana, Slovenia. I'm enthusiastic about
         shaping and making the web a nicer place.
-      </p>
-      <p className="mb-4">
-        For a long time, I’ve always wanted to learn to design spaces that
-        people can enjoy strolling around, always seeking and striving to curate
-        an engaging human experience as they navigate the environment.
-        Throughout this journey, I’ve become more curious about understanding
-        human interaction to build more intuitive things.
-      </p>
-
-      {/* MOBILE VIEW */}
-      <div
-        ref={contentRef}
-        style={{ maxHeight: height }}
-        className="overflow-hidden transition-all duration-500 ease-in-out"
-      >
+      </h2>
+      <div className="max-w-content">
         <p className="mb-4">
-          During my 4th year at University for architecture, after a year long
-          thinking and “what if’s” I decided to shift my career towards building
-          for people in computing spaces because of a desire to work at larger
-          and faster scales. While computing and architecture slowly evolve,
-          still, at the heart of these disciplines are what makes design
-          valuable - it improves people’s lives holistically through emotion,
-          functionality and aesthetics. For this reason, when I’m designing, I
-          try to get rid of all the noise and junk and focus on simplicity and
-          functionality.
+          For a long time, I’ve always wanted to learn to design spaces that
+          people can enjoy strolling around, always seeking and striving to
+          curate an engaging human experience as they navigate the environment.
+          Throughout this journey, I’ve become more curious about understanding
+          human interaction to build more intuitive things.
         </p>
-        <p className="mb-4">
-          When I'm not working, I enjoy learning more about web technologies,
-          playing tennis, basketball and hiking in nature with friends and
-          family.
-        </p>
-      </div>
 
-      <div className="text-gray-100 hover:text-markblue focus:outline-none transition-all">
-        {isExpanded ? (
-          <button
-            className="text-gray-100 hover:text-markblue focus:outline-none transition-all"
-            onClick={toggleExpand}
-          >
-            Show less
-          </button>
-        ) : (
-          <button
-            className="text-gray-100 hover:text-markblue focus:outline-none transition-all"
-            onClick={toggleExpand}
-          >
-            Show more
-          </button>
-        )}
+        {/* MOBILE VIEW */}
+        <div
+          ref={contentRef}
+          style={{ maxHeight: height }}
+          className="overflow-hidden transition-all duration-500 ease-in-out"
+        >
+          <p className="mb-4">
+            During my 4th year at University for architecture, after a year long
+            thinking and “what if’s” I decided to shift my career towards
+            building for people in computing spaces because of a desire to work
+            at larger and faster scales. While computing and architecture slowly
+            evolve, still, at the heart of these disciplines are what makes
+            design valuable - it improves people’s lives holistically through
+            emotion, functionality and aesthetics. For this reason, when I’m
+            designing, I try to get rid of all the noise and junk and focus on
+            simplicity and functionality.
+          </p>
+          <p className="mb-4">
+            When I'm not working, I enjoy learning more about web technologies,
+            playing tennis, basketball and hiking in nature with friends and
+            family.
+          </p>
+        </div>
+
+        <div className="text-gray-100 hover:text-markblue focus:outline-none transition-all">
+          {isExpanded ? (
+            <button
+              className="text-gray-100 hover:text-markblue focus:outline-none transition-all"
+              onClick={toggleExpand}
+            >
+              Show less
+            </button>
+          ) : (
+            <button
+              className="text-gray-100 hover:text-markblue focus:outline-none transition-all"
+              onClick={toggleExpand}
+            >
+              Show more
+            </button>
+          )}
+        </div>
       </div>
     </div>
   );

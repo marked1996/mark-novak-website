@@ -4,8 +4,8 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="w-full pb-16 text-sm text-gray-500 sm:pb-0 grid gap-4 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4">
-      <div className="col-span-8 sm:col-span-5 sm:col-start-3">
+    <footer className="w-full pb-16 text-sm text-gray-500 sm:pb-0 transition-all max-w-2xl m-auto">
+      <div className="">
         <p>
           Loosely designed in{" "}
           <span>

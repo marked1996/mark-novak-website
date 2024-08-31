@@ -11,7 +11,7 @@ const useResponsive = (): ResponsiveState => {
   useEffect(() => {
     // Function to update state based on window width
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 576); // Example breakpoint at 576px
+      setIsMobile(window.innerWidth < 1024); // Example breakpoint at 576px
     };
 
     // Set initial state on client-side load/hydration

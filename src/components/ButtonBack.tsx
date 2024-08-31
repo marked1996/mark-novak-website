@@ -5,7 +5,7 @@ const ButtonBack = () => {
   return (
     <Link
       href="/#projects"
-      className="group hover:text-markblue transition-all flex  font-semibold leading-tight items-center text-gray-100 mb-12"
+      className="group hover:text-markblue transition-all flex  font-semibold leading-tight items-center text-gray-100 mb-4"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"

@@ -10,11 +10,17 @@ const config: Config = {
     extend: {
       colors: {
         body: "#161618",
+        mobilenav: "#171820",
         blob: "hsl(210, 100%, 50%)",
         markblue: "hsl(210, 100%, 40%)",
         lightgray: "hsla(220, 0%, 91%, 1)",
         offwhite: "hsla(210, 20%, 98%, 1)",
         markgray: "hsla(218, 11%, 65%, 1)",
+      },
+      spacing: {
+        cover: "640px",
+        content: "1028px",
+        px: "1px",
       },
     },
   },

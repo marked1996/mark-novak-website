@@ -10,6 +10,8 @@ import tokenGenerator from "@/images/it-tools/token generator.jpg";
 import dateConverter from "@/images/it-tools/date converter.jpg";
 import phoneOne from "@/images/it-tools/phone1.jpg";
 import phoneTwo from "@/images/it-tools/phone2.jpg";
+import Skeleton from "@/components/Skeleton";
+import { Suspense } from "react";
 
 import SwapCallsIcon from "@mui/icons-material/SwapCalls";
 import ViewComfyIcon from "@mui/icons-material/ViewComfy";
@@ -59,12 +61,14 @@ const Page = () => {
             different technologies (React, Vue, Nextjs,...), as developers visit
             them daily and are used to using them.
           </p>
-          <Image
-            className="w-full h-auto mb-2 rounded-md bg-black/40"
-            src={docs}
-            alt="React and Vue developer documentation screenshots"
-            style={{ objectFit: "cover" }}
-          />
+          <Suspense fallback={<Skeleton />}>
+            <Image
+              className="w-full h-auto mb-2 rounded-md bg-black/40"
+              src={docs}
+              alt="React and Vue developer documentation screenshots"
+              style={{ objectFit: "cover" }}
+            />
+          </Suspense>
           <p className="text-xs lg:text-sm text-center mb-8">
             React and Vue documentation screenshots
           </p>
@@ -112,12 +116,14 @@ const Page = () => {
           </p>
         </div>
       </div>
-      <Image
-        className="w-full h-auto mb-2 rounded-md "
-        src={wireframes}
-        alt="Desktop and mobile wireframes"
-        style={{ objectFit: "cover" }}
-      />
+      <Suspense fallback={<Skeleton />}>
+        <Image
+          className="w-full h-auto mb-2 rounded-md "
+          src={wireframes}
+          alt="Desktop and mobile wireframes"
+          style={{ objectFit: "cover" }}
+        />
+      </Suspense>
       <div className=" p-6 lg:px-10 max-w-content w-full mx-auto">
         <h3 className="mb-2 text-slate-200 font-medium text-xl tracking-tight">
           From concept to reality
@@ -127,42 +133,54 @@ const Page = () => {
           design. This stage involved refining the layout, selecting the
           appropriate colors, typography and incorporating interactive elements.
         </p>
-        <Image
-          className="w-full h-auto mb-2 rounded-md "
-          src={homeScreen}
-          alt="Home screen"
-          style={{ objectFit: "cover" }}
-        />
-        <Image
-          className="w-full h-auto mb-2 rounded-md "
-          src={searchScreen}
-          alt="Search screen"
-          style={{ objectFit: "cover" }}
-        />
-        <Image
-          className="w-full h-auto mb-2 rounded-md "
-          src={tokenGenerator}
-          alt="Token generator tool mockup"
-          style={{ objectFit: "cover" }}
-        />
-        <Image
-          className="w-full h-auto mb-2 rounded-md "
-          src={dateConverter}
-          alt="Date converter tool mockup"
-          style={{ objectFit: "cover" }}
-        />
-        <Image
-          className="w-full h-auto mb-2 rounded-md "
-          src={phoneOne}
-          alt="Noxity dev tools second phone mockup"
-          style={{ objectFit: "cover" }}
-        />
-        <Image
-          className="w-full h-auto mb-2 rounded-md mb-2"
-          src={phoneTwo}
-          alt="Noxity dev tools second phone mockup"
-          style={{ objectFit: "cover" }}
-        />
+        <Suspense fallback={<Skeleton />}>
+          <Image
+            className="w-full h-auto mb-2 rounded-md "
+            src={homeScreen}
+            alt="Home screen"
+            style={{ objectFit: "cover" }}
+          />
+        </Suspense>
+        <Suspense fallback={<Skeleton />}>
+          <Image
+            className="w-full h-auto mb-2 rounded-md "
+            src={searchScreen}
+            alt="Search screen"
+            style={{ objectFit: "cover" }}
+          />
+        </Suspense>
+        <Suspense fallback={<Skeleton />}>
+          <Image
+            className="w-full h-auto mb-2 rounded-md "
+            src={tokenGenerator}
+            alt="Token generator tool mockup"
+            style={{ objectFit: "cover" }}
+          />
+        </Suspense>
+        <Suspense fallback={<Skeleton />}>
+          <Image
+            className="w-full h-auto mb-2 rounded-md "
+            src={dateConverter}
+            alt="Date converter tool mockup"
+            style={{ objectFit: "cover" }}
+          />
+        </Suspense>
+        <Suspense fallback={<Skeleton />}>
+          <Image
+            className="w-full h-auto mb-2 rounded-md "
+            src={phoneOne}
+            alt="Noxity dev tools second phone mockup"
+            style={{ objectFit: "cover" }}
+          />
+        </Suspense>
+        <Suspense fallback={<Skeleton />}>
+          <Image
+            className="w-full h-auto mb-2 rounded-md "
+            src={phoneTwo}
+            alt="Noxity dev tools second phone mockup"
+            style={{ objectFit: "cover" }}
+          />
+        </Suspense>
         <video autoPlay muted loop className="w-full h-auto rounded-md">
           <source
             src={"/images/it-tools/it-tools-video.mp4"}

@@ -1,6 +1,9 @@
 import React from "react";
 import ButtonBack from "@/components/ButtonBack";
 
+import { Suspense } from "react";
+import Skeleton from "@/components/Skeleton";
+
 const Page = () => {
   return (
     <>
@@ -18,9 +21,11 @@ const Page = () => {
             inspiration from the web?
           </p>
         </div>
-        <video autoPlay muted loop className="w-full h-auto rounded-md">
-          <source src={"/images/ootd/ootdVideo.mp4"} type="video/mp4" />
-        </video>
+        <Suspense fallback={<Skeleton />}>
+          <video autoPlay muted loop className="w-full h-auto rounded-md">
+            <source src={"/images/ootd/ootdVideo.mp4"} type="video/mp4" />
+          </video>
+        </Suspense>
       </div>
     </>
   );

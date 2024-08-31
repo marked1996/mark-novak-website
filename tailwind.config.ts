@@ -22,6 +22,9 @@ const config: Config = {
         content: "1028px",
         px: "1px",
       },
+      backgroundImage: {
+        "title-gradient": "linear-gradient(to right, #004D99, #3399FF)",
+      },
     },
   },
   plugins: [],

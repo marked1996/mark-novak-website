@@ -12,14 +12,14 @@ import CollapsibleText from "@/components/CollapsibleText";
 export default function Home() {
   return (
     <>
-      <div className="lg:mx-12 mx-6 pt-16 lg:pt-10">
+      <div className="lg:mx-12 mx-6 pt-16 lg:pt-10 pb-16 lg:pb-10">
         <section
           className="mb-12 scroll-mt-16 md:mb-14 lg:mb-16 lg:scroll-mt-24 "
           aria-label="About me"
           id="about"
         >
           <div>
-            <h2 className="text-2xl font-medium tracking-tight mb-8 text-gray-100 block lg:hidden">
+            <h2 className="text-2xl font-medium tracking-tight mb-8 text-slate-100 block lg:hidden">
               About me
             </h2>
           </div>
@@ -32,7 +32,7 @@ export default function Home() {
           id="projects"
           aria-label="My projects"
         >
-          <h2 className="lg:hidden block text-2xl font-medium tracking-tight text-gray-100 mb-8 pb-2">
+          <h2 className="border-t lg:border-0 border-slate-500/30 lg:hidden block text-2xl font-medium tracking-tight text-gray-100 mb-8 py-2">
             Projects
           </h2>
           <div className="">
@@ -85,11 +85,17 @@ export default function Home() {
                     <article className="w-full h-full flex flex-col">
                       <Suspense fallback={<Skeleton />}>
                         <div className="overflow-hidden rounded-md flex-1">
-                          <Image
-                            src={ootdVideo}
-                            className="w-full h-full group-hover:scale-105 transition-all object-cover"
-                            alt="Outfit of the day prototype idea"
-                          />
+                          <video
+                            autoPlay
+                            muted
+                            loop
+                            className="w-full h-auto rounded-md"
+                          >
+                            <source
+                              src={"/images/ootd/ootdVideo.mp4"}
+                              type="video/mp4"
+                            />
+                          </video>
                         </div>
                       </Suspense>
                       <div className="mt-2 flex justify-between items-start">
@@ -168,7 +174,7 @@ export default function Home() {
           id="experience"
           aria-label="Experience"
         >
-          <h2 className="pb-2 text-2xl font-medium tracking-tight text-gray-100 mb-8 lg:hidden ">
+          <h2 className="border-t border-slate-500/30 lg:border-0 py-2 text-2xl font-medium tracking-tight text-gray-100 mb-8 lg:hidden ">
             Experience
           </h2>
           <div>
@@ -214,14 +220,10 @@ export default function Home() {
                       Product designer at Alumnio startup
                     </h3>
                     <p className="text-sm font-normal mb-4">
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                      Et placeat nobis quaerat hic molestias. Dolorum hic sunt
-                      saepe itaque harum, debitis dicta fugiat illum magnam
-                      maxime tempore exercitationem praesentium rem. Explicabo
-                      tempore, ab adipisci fuga eum doloribus ad rem incidunt in
-                      voluptates hic, nobis est tempora numquam. Error, earum
-                      dolore in nulla numquam temporibus itaque delectus
-                      voluptas. Aperiam, atque dolorum?
+                      I collaborated with a startup team of entrepreneurs,
+                      focusing on creating the brand identity and developing
+                      marketing strategies. Additionally, I designed, developed
+                      and mantained the company's website.
                     </p>
                     <div className="flex gap-2 flex-wrap">
                       <Tag text="Figma" />
@@ -268,7 +270,7 @@ export default function Home() {
           id="education"
           aria-label="Education"
         >
-          <h2 className="text-2xl font-medium tracking-tight text-gray-100 mb-8 pb-2 lg:hidden block">
+          <h2 className="border-t border-slate-500/30 lg:border-0 text-2xl font-medium tracking-tight text-gray-100 mb-8 py-2 lg:hidden block">
             Education
           </h2>
           <div>

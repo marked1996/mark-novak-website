@@ -21,7 +21,7 @@ export default function CollapsibleText() {
 
   return (
     <div>
-      <p className="mb-4 text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight text-slate-300">
+      <p className="mb-4 text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight text-slate-200">
         I'm a designer living in Ljubljana, Slovenia. I'm enthusiastic about
         shaping and making the web a nicer place.
       </p>

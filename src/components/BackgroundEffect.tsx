@@ -50,10 +50,8 @@ const BackgroundEffect = () => {
   return (
     <div
       ref={elementRef}
-      className={`-z-10 fixed w-16 h-72 md:w-96 md:h-96] lg:w-[800px] lg:h-[800px] rounded-[50%] blur-3xl md:blur-[64px] lg:blur-[88px] bg-blob opacity-30 md:opacity-10 ${
-        isSmallScreen
-          ? "top-24 right-36 md:top-36 md:right-52 lg:top-28 lg:right-96"
-          : ""
+      className={`-z-10 fixed w-24 h-80 md:w-96 md:h-96 lg:w-[800px] lg:h-[800px] rounded-[50%] blur-3xl md:blur-[64px] lg:blur-[88px] bg-blob opacity-40 md:opacity-10 ${
+        isSmallScreen ? "top-0 right-16 -rotate-45" : ""
       }`}
       aria-label="background effect"
       style={bgStyle}

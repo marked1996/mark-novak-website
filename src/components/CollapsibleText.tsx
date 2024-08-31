@@ -4,15 +4,19 @@ import { useState, useRef, useEffect } from "react";
 export default function CollapsibleText() {
   const [isExpanded, setIsExpanded] = useState(false);
   const [height, setHeight] = useState("0px");
-  const contentRef = useRef(null);
+
+  // Typing the ref correctly
+  const contentRef = useRef<HTMLDivElement>(null);
 
   const toggleExpand = () => {
     setIsExpanded(!isExpanded);
   };
 
   useEffect(() => {
-    // Set height based on content size
-    setHeight(isExpanded ? `${contentRef.current.scrollHeight}px` : "0px");
+    if (contentRef.current) {
+      // Set height based on content size
+      setHeight(isExpanded ? `${contentRef.current.scrollHeight}px` : "0px");
+    }
   }, [isExpanded]);
 
   return (
@@ -28,7 +32,6 @@ export default function CollapsibleText() {
         Throughout this journey, I’ve become more curious about understanding
         human interaction to build more intuitive things.
       </p>
-      {/* DESKTOP VIEW */}
 
       {/* MOBILE VIEW */}
       <div
@@ -41,7 +44,7 @@ export default function CollapsibleText() {
           thinking and “what if’s” I decided to shift my career towards building
           for people in computing spaces because of a desire to work at larger
           and faster scales. While computing and architecture slowly evolve,
-          still, at the heart of these disciplinges are what makes design
+          still, at the heart of these disciplines are what makes design
           valuable - it improves people’s lives holistically through emotion,
           functionality and aesthetics. For this reason, when I’m designing, I
           try to get rid of all the noise and junk and focus on simplicity and

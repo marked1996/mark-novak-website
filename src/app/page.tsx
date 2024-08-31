@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Tag from "@/components/Tag";
 import Footer from "@/components/Footer";
-import ootdVideo from "../images/ootd/ootdVideoGif.gif";
+import ootdVideo from "@/images/ootd/testootd.png";
 import nowaLogo from "@/images/nowa/nowa logo.jpg";
 import itToolsMockup from "@/images/it-tools/home mockup.jpg";
 import { Suspense } from "react";

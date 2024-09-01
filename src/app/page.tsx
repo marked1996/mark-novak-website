@@ -19,7 +19,7 @@ export default function Home() {
           id="about"
         >
           <div>
-            <h2 className="text-2xl font-medium tracking-tight mb-8 text-slate-100 block lg:hidden">
+            <h2 className="text-2xl font-medium tracking-tight mb-8 text-slate-100 hidden">
               About me
             </h2>
           </div>
@@ -32,7 +32,7 @@ export default function Home() {
           id="projects"
           aria-label="My projects"
         >
-          <h2 className="border-t lg:border-0 border-slate-500/30 lg:hidden block text-2xl font-medium tracking-tight text-gray-100 mb-8 py-2">
+          <h2 className="border-t lg:border-0 uppercase border-slate-500/30 lg:hidden block font-semibold tracking-widest text-slate-500 mb-8 py-2 text-xs">
             Projects
           </h2>
           <div className="">
@@ -52,23 +52,13 @@ export default function Home() {
                       </div>
                     </Suspense>
                     <div className="mt-2 flex justify-between items-start">
-                      <div className="flex justify-center items-center text-gray-100">
+                      <div className="flex justify-center items-center text-slate-100 group-hover:text-markblue transition-all">
                         <h3
-                          className=" tracking-tight text-gray-100 focus-visible:text-gray-100 text-xl md:text-2xl font-medium"
+                          className=" tracking-tight focus-visible:text-slate-100 text-xl md:text-2xl font-medium"
                           aria-label="Noxity developer tools"
                         >
                           Noxity developer tools
                         </h3>
-                        <svg
-                          className=" size-6 mr-1 transition-transform group-hover:translate-x-2 opacity-0 group-hover:opacity-100"
-                          xmlns="http://www.w3.org/2000/svg"
-                          // height="32px"
-                          viewBox="0 -960 960 960"
-                          width="24px"
-                          fill="currentColor"
-                        >
-                          <path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z" />
-                        </svg>
                       </div>
                       <div className="flex gap-2 flex-wrap justify-end">
                         <Tag text="Prototype" />
@@ -78,7 +68,7 @@ export default function Home() {
                   </article>
                 </Link>
               </li>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:gap-6">
                 {/* OOTD */}
                 <li className="mb-8 lg:mb-12 group flex">
                   <Link href="/ootd" className="flex-1 h-full">
@@ -89,7 +79,7 @@ export default function Home() {
                             autoPlay
                             muted
                             loop
-                            className="w-full h-auto rounded-md"
+                            className="w-full h-auto rounded-md group-hover:scale-105 transition-all"
                           >
                             <source
                               src={"/images/ootd/ootdVideo.mp4"}
@@ -99,22 +89,13 @@ export default function Home() {
                         </div>
                       </Suspense>
                       <div className="mt-2 flex justify-between items-start">
-                        <div className="flex justify-center items-center text-gray-100">
+                        <div className="flex justify-center items-center text-slate-100 group-hover:text-markblue transition-all">
                           <h3
-                            className="tracking-tight text-gray-100 focus-visible:text-gray-100 text-xl md:text-2xl font-medium"
+                            className="tracking-tight  focus-visible:text-slate-100 text-xl md:text-2xl font-medium"
                             aria-label="Outfit of the day idea"
                           >
                             Outfit of the day
                           </h3>
-                          <svg
-                            className="size-6 mr-1 transition-transform group-hover:translate-x-2 opacity-0 group-hover:opacity-100"
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="24px"
-                            fill="currentColor"
-                            viewBox="0 -960 960 960"
-                          >
-                            <path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z" />
-                          </svg>
                         </div>
                         <div className="flex gap-2 flex-wrap justify-end">
                           <Tag text="Prototype" />
@@ -139,22 +120,13 @@ export default function Home() {
                         </div>
                       </Suspense>
                       <div className="mt-2 flex justify-between items-start">
-                        <div className="flex justify-center items-center text-gray-100">
+                        <div className="flex justify-center items-center text-slate-100 group-hover:text-markblue transition-all">
                           <h3
-                            className="tracking-tight text-gray-100 focus-visible:text-gray-100 text-xl md:text-2xl font-medium"
+                            className="tracking-tight  focus-visible:text-slate-100 text-xl md:text-2xl font-medium"
                             aria-label="Nowa agency rebrand"
                           >
                             Nowa
                           </h3>
-                          <svg
-                            className="size-6 mr-1 transition-transform group-hover:translate-x-2 opacity-0 group-hover:opacity-100"
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="24px"
-                            fill="currentColor"
-                            viewBox="0 -960 960 960"
-                          >
-                            <path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z" />
-                          </svg>
                         </div>
                         <div className="flex gap-2 flex-wrap justify-end">
                           <Tag text="Visual identity" />
@@ -174,7 +146,7 @@ export default function Home() {
           id="experience"
           aria-label="Experience"
         >
-          <h2 className="border-t border-slate-500/30 lg:border-0 py-2 text-2xl font-medium tracking-tight text-gray-100 mb-8 lg:hidden ">
+          <h2 className="border-t lg:border-0 uppercase border-slate-500/30 lg:hidden block font-semibold tracking-widest text-slate-500 mb-8 py-2 text-xs">
             Experience
           </h2>
           <div>
@@ -270,7 +242,7 @@ export default function Home() {
           id="education"
           aria-label="Education"
         >
-          <h2 className="border-t border-slate-500/30 lg:border-0 text-2xl font-medium tracking-tight text-gray-100 mb-8 py-2 lg:hidden block">
+          <h2 className="border-t lg:border-0 uppercase border-slate-500/30 lg:hidden block font-semibold tracking-widest text-slate-500 mb-8 py-2 text-xs">
             Education
           </h2>
           <div>

@@ -4,13 +4,13 @@ import Link from "next/link";
 
 const Cta = () => {
   return (
-    <div className="mt-8 lg:mt-4 inline-flex flex-col items-start">
+    <div className=" inline-flex flex-col items-start">
       <Beacon />
-      <p className="text-sm mt-2 lg:block">
+      <p className="text-sm pt-2 lg:block">
         I'm always up for a new challenge. Contact me if you think we would be a
         good fit.
       </p>
-      <div className="flex flex-wrap gap-4 mt-2 lg:mt-4">
+      <div className="flex flex-wrap gap-4 pt-2 lg:pt-4">
         <Link
           className="text-sm text-gray-100 hover:text-markblue transition-all"
           href="mailto:novakmark9@gmail.com"

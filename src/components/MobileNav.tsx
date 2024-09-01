@@ -1,7 +1,8 @@
 "use client";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import Cta from "./Cta";
 
 const navLinks = [
   { title: "Home", href: "/#about" },
@@ -10,40 +11,79 @@ const navLinks = [
   { title: "Education", href: "/#education" },
 ];
 
+// Header animation variants
+const headerVariants = {
+  closed: {
+    height: "53px",
+    transition: {
+      duration: 0.7,
+      ease: "easeInOut",
+    },
+  },
+  open: {
+    height: "100dvh",
+    transition: {
+      duration: 0.7,
+      ease: "easeInOut",
+    },
+  },
+};
+
+// Link container animation variants with stagger effect
+const navVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1, // Stagger the animation of the children
+      delayChildren: 0.3, // Delay before starting to animate the children
+    },
+  },
+};
+
+// Individual link animation variants
+const linkVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+};
+
+// CTA animation variant
+const ctaVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, ease: "easeOut", delay: 0.7 },
+  },
+};
+
 const MobileNav = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
 
   const handleClick = () => {
     setIsOpen((prevState) => !prevState);
   };
 
-  // Parent variant to control stagger and timing
-  const navVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        delayChildren: 0.5, // Delay the start of children animations by 0.5s
-        staggerChildren: 0.2, // Stagger each link animation by 0.2s
-      },
-    },
-    exit: {
-      opacity: 0,
-      transition: {
-        staggerChildren: 0.2, // Apply stagger for exiting
-        staggerDirection: -1, // Reverse the order of staggering for exit
-      },
-    },
-  };
-
   return (
     <motion.header
-      className="z-50 fixed w-full backdrop-blur-lg lg:hidden bg-mobilenav/70 border-b border-slate-500/30 px-6 py-3"
-      animate={{
-        height: isOpen ? "100dvh" : "auto", // Adjust height here
-      }}
-      initial={false}
-      transition={{ duration: 0.5, ease: [0.12, 0, 0.39, 0] }} // Smooth transition for height
+      className="z-50 fixed w-full backdrop-blur-lg lg:hidden bg-mobilenav/80 border-b border-slate-500/30 px-6 py-3"
+      variants={headerVariants}
+      initial="closed"
+      animate={isOpen ? "open" : "closed"}
+      style={{ willChange: "height" }} // Force reflow optimization
+      layout
     >
       <div className="w-full flex justify-between items-center text-slate-200">
         <Link className="text-lg" href="/">
@@ -69,33 +109,36 @@ const MobileNav = () => {
           </svg>
         </button>
       </div>
+
       <AnimatePresence>
         {isOpen && (
           <motion.nav
-            className="flex flex-col justify-between"
-            variants={navVariants}
+            className="flex h-full flex-col justify-between pb-4"
             initial="hidden"
             animate="visible"
-            exit="exit" // Trigger exit animation when closing
+            exit="hidden"
+            variants={navVariants}
+            transition={{ delay: 0.3 }} // Delay the animation
           >
-            <div className="mt-24">
+            <motion.div className="py-20">
               {navLinks.map((link, index) => (
                 <motion.div
                   key={index}
-                  variants={mobileLinkVars} // Apply the correct variants for each link
-                  initial="hidden"
-                  animate="visible"
-                  exit="exit"
+                  variants={linkVariants}
                   className="overflow-hidden"
                 >
                   <MobileNavLink
                     key={index}
+                    toggleState={handleClick}
                     href={link.href}
                     title={link.title}
                   />
                 </motion.div>
               ))}
-            </div>
+            </motion.div>
+            <motion.div className="mb-4" variants={ctaVariants}>
+              <Cta />
+            </motion.div>
           </motion.nav>
         )}
       </AnimatePresence>
@@ -108,37 +151,20 @@ export default MobileNav;
 interface MobileNavLinkProps {
   title: string;
   href: string;
+  toggleState: () => void;
 }
 
-// Moved the variants definition here so it can be used correctly
-const mobileLinkVars = {
-  hidden: {
-    x: "-30px",
-    opacity: 0,
-    transition: {
-      duration: 0.5,
-    },
-  },
-  visible: {
-    x: 0,
-    opacity: 1,
-    transition: {
-      duration: 0.5,
-    },
-  },
-  exit: {
-    x: "-30px",
-    opacity: 0,
-    transition: {
-      duration: 0.5,
-    },
-  },
-};
-
-const MobileNavLink: React.FC<MobileNavLinkProps> = ({ title, href }) => {
+const MobileNavLink: React.FC<MobileNavLinkProps> = ({
+  title,
+  href,
+  toggleState,
+}) => {
   return (
-    <motion.div className="text-4xl font-medium tracking-tight text-slate-200 py-3">
+    <div
+      onClick={toggleState}
+      className="text-xl font-medium tracking-tight text-slate-200 py-3 border-slate-500/30 border-b"
+    >
       <Link href={href}>{title}</Link>
-    </motion.div>
+    </div>
   );
 };

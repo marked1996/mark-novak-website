@@ -3,6 +3,7 @@ import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Cta from "./Cta";
+import ChevronIcon from "@/components/ChevronIcon";
 
 const navLinks = [
   { title: "Home", href: "/#about" },
@@ -90,8 +91,8 @@ const MobileNav = () => {
           Mark Novak
         </Link>
         <button onClick={handleClick}>
-          {/* hamburger menu icon */}
-          <svg
+          <ChevronIcon isOpen={isOpen} />
+          {/* <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
@@ -106,7 +107,7 @@ const MobileNav = () => {
               strokeLinejoin="round"
               d="m19.5 8.25-7.5 7.5-7.5-7.5"
             />
-          </svg>
+          </svg> */}
         </button>
       </div>
 

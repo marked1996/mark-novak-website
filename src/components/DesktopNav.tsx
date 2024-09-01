@@ -25,7 +25,7 @@ const DesktopNav = () => {
             </Link>
           </div>
           <h2 className="mt-3 text-lg tracking-tight text-gray-100 sm:text-xl font-medium">
-            UI UX Designer & Frontend developer
+            UI UX Designer
           </h2>
           <p className="mt-4">
             I build pixel-perfect, engaging, and accessible digital experiences.

@@ -22,8 +22,9 @@ export default function CollapsibleText() {
   return (
     <div>
       <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight text-slate-200">
-        I'm a designer living in Ljubljana, Slovenia. I'm enthusiastic about
-        shaping and making the web a nicer place.
+        I'm a designer crafting interfaces and interactions that are useful and
+        feel natural. I'm passionate about enhancing the web experience, one
+        interaction at a time.
       </h2>
       <div className="max-w-content">
         <p className="mb-4">
@@ -47,14 +48,15 @@ export default function CollapsibleText() {
             at larger and faster scales. While computing and architecture slowly
             evolve, still, at the heart of these disciplines are what makes
             design valuable - it improves people’s lives holistically through
-            emotion, functionality and aesthetics. For this reason, when I’m
-            designing, I try to get rid of all the noise and junk and focus on
-            simplicity and functionality.
+            emotion, functionality and aesthetics. I believe that the core of
+            any great design lies in its ability to enhance lives. That's why,
+            when I'm designing, I focus on stripping away the noise and
+            prioritizing simplicity and functionality.
           </p>
           <p className="mb-4">
             When I'm not working, I enjoy learning more about web technologies,
-            playing tennis, basketball and hiking in nature with friends and
-            family.
+            playing tennis, basketball, hiking in nature and grabbing an
+            occasional beer or two with friends and family.
           </p>
         </div>
 

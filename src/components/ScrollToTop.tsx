@@ -31,7 +31,7 @@ const ScrollToTop = () => {
     <div>
       {isVisible && (
         <button
-          className="z-10 rounded-full fixed bottom-5 right-5 bg-[#102A45] text-[#0066CC] p-2 group transition-all hover:bg-[#0B3E72] hover:text-[#3579E6] drop-shadow-md"
+          className="z-10 rounded-full fixed bottom-5 right-5 bg-[#163455] text-[#0066CC] p-2 group transition-all hover:bg-[#0B3E72] hover:text-[#3579E6] drop-shadow-md"
           onClick={() => scrollToTop()}
         >
           <svg

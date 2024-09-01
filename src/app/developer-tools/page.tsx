@@ -10,6 +10,7 @@ import tokenGenerator from "@/images/it-tools/token generator.jpg";
 import dateConverter from "@/images/it-tools/date converter.jpg";
 import phoneOne from "@/images/it-tools/phone1.jpg";
 import phoneTwo from "@/images/it-tools/phone2.jpg";
+import closeUpScreen from "@/images/it-tools/closeupScreen.jpg";
 import Skeleton from "@/components/Skeleton";
 import { Suspense } from "react";
 
@@ -76,8 +77,8 @@ const Page = () => {
             After researching various documentation sites, I focused on three
             main points:
           </p>
-          <div className="flex flex-col lg:flex-row gap-4 md:gap-6">
-            <div className="">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+            <div className="col-span-1">
               <SwapCallsIcon className="text-slate-200 size-6" />
               <h4 className="text-slate-200 mb-2">Streamlined navigation</h4>
               <p className="text-sm">
@@ -85,7 +86,7 @@ const Page = () => {
                 access to information.
               </p>
             </div>
-            <div className="">
+            <div className="col-span-1">
               <VisibilityIcon className="text-slate-200 size-5" />
               <h4 className="text-slate-200 mb-2">Search functionality</h4>
               <p className="text-sm">
@@ -93,7 +94,7 @@ const Page = () => {
                 the project grows, beyond the navigation menu.
               </p>
             </div>
-            <div className="">
+            <div className="col-span-1">
               <ViewComfyIcon className="text-slate-200 size-5" />
               <h4 className="text-slate-200 mb-2">Familiar UX</h4>
               <p className="text-sm">
@@ -138,6 +139,14 @@ const Page = () => {
             className="w-full h-auto mb-2 rounded-md "
             src={homeScreen}
             alt="Home screen"
+            style={{ objectFit: "cover" }}
+          />
+        </Suspense>
+        <Suspense fallback={<Skeleton />}>
+          <Image
+            className="w-full h-auto mb-2 rounded-md "
+            src={closeUpScreen}
+            alt="Close up home screen"
             style={{ objectFit: "cover" }}
           />
         </Suspense>

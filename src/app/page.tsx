@@ -68,7 +68,7 @@ export default function Home() {
                   </article>
                 </Link>
               </li>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6">
                 {/* OOTD */}
                 <li className="mb-8 lg:mb-12 group flex">
                   <Link href="/ootd" className="flex-1 h-full">
@@ -172,8 +172,10 @@ export default function Home() {
                     <div className="flex gap-2 flex-wrap">
                       <Tag text="UI UX design" />
                       <Tag text="Javascript" />
-                      <Tag text="Figma" />
+                      <Tag text="HTML CSS" />
+                      <Tag text="React" />
                       <Tag text="Wordpress" />
+                      <Tag text="Figma" />
                       <Tag text="Adobe" />
                     </div>
                   </div>
@@ -195,7 +197,8 @@ export default function Home() {
                       I collaborated with a startup team of entrepreneurs,
                       focusing on creating the brand identity and developing
                       marketing strategies. Additionally, I designed, developed
-                      and mantained the company's website.
+                      and mantained the company's website as well as the design
+                      system.
                     </p>
                     <div className="flex gap-2 flex-wrap">
                       <Tag text="Figma" />

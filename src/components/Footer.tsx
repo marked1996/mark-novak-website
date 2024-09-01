@@ -3,6 +3,8 @@ import Link from "next/link";
 import React from "react";
 
 const Footer = () => {
+  const currDate = new Date().getFullYear();
+
   return (
     <footer className="w-full text-sm text-gray-500 transition-all max-w-2xl m-auto">
       <div className="">
@@ -31,7 +33,8 @@ const Footer = () => {
               Visual Studio Code
             </Link>
           </span>{" "}
-          by yours truly. Built with{" "}
+          in late July, early August 2024. I'm still adding past projects so be
+          on the lookout. Built with{" "}
           <span>
             <Link
               href="https://nextjs.org/"

@@ -13,6 +13,23 @@ export const metadata: Metadata = {
   title: "Mark Novak portfolio",
   description:
     "Mark Novak is a designer and developer who builds accessible, inclusive products and digital experiences for the web.",
+  openGraph: {
+    title: "Mark Novak portfolio",
+    description:
+      "Mark Novak is a designer and developer who builds accessible, inclusive products and digital experiences for the web.",
+    url: "https://novakmark.com/",
+    type: "website",
+    images: [
+      {
+        url: "https://novakmark.com/portret-mark.jpg",
+        alt: "portrait image of Mark Novak",
+      },
+    ],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({

@@ -4,6 +4,8 @@ import "./globals.css";
 import BackgroundEffect from "@/components/BackgroundEffect";
 import ScrollToTop from "@/components/ScrollToTop";
 import Navbar from "@/components/Navbar";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,6 +23,8 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.className} scroll-smooth`}>
       <body className=" relative min-h-screen bg-body text-gray-400">
+        <SpeedInsights />
+        <Analytics />
         <ScrollToTop />
         <BackgroundEffect />
         <div className="mx-auto min-h-screen  lg:py-0">

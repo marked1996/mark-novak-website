@@ -190,7 +190,13 @@ const Page = () => {
             style={{ objectFit: "cover" }}
           />
         </Suspense>
-        <video autoPlay muted loop className="w-full h-auto rounded-md">
+        <video
+          autoPlay
+          playsInline
+          muted
+          loop
+          className="w-full h-auto rounded-md"
+        >
           <source
             src={"/images/it-tools/it-tools-video.mp4"}
             type="video/mp4"

@@ -79,6 +79,7 @@ export default function Home() {
                             autoPlay
                             muted
                             loop
+                            playsInline
                             className="w-full h-auto rounded-md group-hover:scale-105 transition-all"
                           >
                             <source

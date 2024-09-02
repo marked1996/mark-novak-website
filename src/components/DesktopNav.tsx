@@ -4,7 +4,7 @@ import Link from "next/link";
 import portretMark from "@/../../public/portret-mark.jpg";
 import Navigation from "@/components/Navigation";
 import Cta from "./Cta";
-import SkeletonPortrait from "./SkeletonPortrait";
+import SkeletonPortrait from "@/components/SkeletonPortrait";
 import { Suspense } from "react";
 
 const DesktopNav = () => {

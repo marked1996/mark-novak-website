@@ -35,111 +35,111 @@ export default function Home() {
           <h2 className="border-t lg:border-0 uppercase border-slate-500/30 lg:hidden block font-semibold tracking-widest text-slate-500 mb-8 py-2 text-xs">
             Projects
           </h2>
-          <div className="">
-            <ul className="">
-              {/*   IT tools */}
-              <li className="mb-8 lg:mb-12 group">
-                <Link href="/developer-tools">
-                  <article className="w-full ">
-                    <Suspense fallback={<Skeleton />}>
-                      <div className="overflow-hidden rounded-md">
-                        <Image
-                          src={itToolsMockup}
-                          className="w-full h-full group-hover:scale-105 transition-all"
-                          style={{ objectFit: "cover" }}
-                          alt="Im an alt"
-                        />
-                      </div>
-                    </Suspense>
-                    <div className="mt-2 flex justify-between items-start">
-                      <div className="flex justify-center items-center text-slate-100 group-hover:text-markblue transition-all">
-                        <h3
-                          className=" tracking-tight focus-visible:text-slate-100 text-xl md:text-2xl font-medium"
-                          aria-label="Noxity developer tools"
-                        >
-                          Noxity developer tools
-                        </h3>
-                      </div>
-                      <div className="flex gap-2 flex-wrap justify-end">
-                        <Tag text="Prototype" />
-                        <Tag text="UI UX" />
-                      </div>
+          {/* <div className=""> */}
+          <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
+            {/*   IT tools */}
+            <li className="md:col-span-2 group flex">
+              <Link href="/developer-tools">
+                <article className="w-full ">
+                  <Suspense fallback={<Skeleton />}>
+                    <div className="overflow-hidden rounded-md">
+                      <Image
+                        src={itToolsMockup}
+                        className="w-full h-full group-hover:scale-105 transition-all"
+                        style={{ objectFit: "cover" }}
+                        alt="Im an alt"
+                      />
                     </div>
-                  </article>
-                </Link>
-              </li>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6">
-                {/* OOTD */}
-                <li className="mb-8 lg:mb-12 group flex">
-                  <Link href="/ootd" className="flex-1 h-full">
-                    <article className="w-full h-full flex flex-col">
-                      <Suspense fallback={<Skeleton />}>
-                        <div className="overflow-hidden rounded-md flex-1">
-                          <video
-                            autoPlay
-                            muted
-                            loop
-                            playsInline
-                            className="w-full h-auto rounded-md group-hover:scale-105 transition-all"
-                          >
-                            <source
-                              src={"/images/ootd/ootdVideo.mp4"}
-                              type="video/mp4"
-                            />
-                          </video>
-                        </div>
-                      </Suspense>
-                      <div className="mt-2 flex justify-between items-start">
-                        <div className="flex justify-center items-center text-slate-100 group-hover:text-markblue transition-all">
-                          <h3
-                            className="tracking-tight  focus-visible:text-slate-100 text-xl md:text-2xl font-medium"
-                            aria-label="Outfit of the day idea"
-                          >
-                            Outfit of the day
-                          </h3>
-                        </div>
-                        <div className="flex gap-2 flex-wrap justify-end">
-                          <Tag text="Prototype" />
-                          <Tag text="UI" />
-                        </div>
-                      </div>
-                    </article>
-                  </Link>
-                </li>
+                  </Suspense>
+                  <div className="mt-2 flex justify-between items-start">
+                    <div className="flex justify-center items-center text-slate-100 group-hover:text-markblue transition-all">
+                      <h3
+                        className=" tracking-tight focus-visible:text-slate-100 text-xl md:text-2xl font-medium"
+                        aria-label="Noxity developer tools"
+                      >
+                        Noxity developer tools
+                      </h3>
+                    </div>
+                    <div className="flex gap-2 flex-wrap justify-end">
+                      <Tag text="Prototype" />
+                      <Tag text="UI UX" />
+                    </div>
+                  </div>
+                </article>
+              </Link>
+            </li>
+            {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6"> */}
+            {/* OOTD */}
+            <li className=" group flex">
+              <Link href="/ootd" className="w-full">
+                <article className="w-full h-full flex flex-col">
+                  <Suspense fallback={<Skeleton />}>
+                    <div className="overflow-hidden rounded-md flex-1">
+                      <video
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        className="w-full h-auto rounded-md group-hover:scale-105 transition-all"
+                      >
+                        <source
+                          src={"/images/ootd/ootdVideo.mp4"}
+                          type="video/mp4"
+                        />
+                      </video>
+                    </div>
+                  </Suspense>
+                  <div className="mt-2 flex justify-between items-start">
+                    <div className="flex justify-center items-center text-slate-100 group-hover:text-markblue transition-all">
+                      <h3
+                        className="tracking-tight  focus-visible:text-slate-100 text-xl md:text-2xl font-medium"
+                        aria-label="Outfit of the day idea"
+                      >
+                        Outfit of the day
+                      </h3>
+                    </div>
+                    <div className="flex gap-2 flex-wrap justify-end">
+                      <Tag text="Prototype" />
+                      <Tag text="UI" />
+                    </div>
+                  </div>
+                </article>
+              </Link>
+            </li>
 
-                {/* NOWA */}
-                <li className="mb-8 lg:mb-12 group flex">
-                  <Link href="/nowa" className="flex-1 h-full">
-                    <article className="w-full h-full flex flex-col">
-                      <Suspense fallback={<Skeleton />}>
-                        <div className="overflow-hidden rounded-md flex-1">
-                          <Image
-                            src={nowaLogo}
-                            className="w-full h-full group-hover:scale-105 transition-all object-cover"
-                            alt="nowa logotype"
-                          />
-                        </div>
-                      </Suspense>
-                      <div className="mt-2 flex justify-between items-start">
-                        <div className="flex justify-center items-center text-slate-100 group-hover:text-markblue transition-all">
-                          <h3
-                            className="tracking-tight  focus-visible:text-slate-100 text-xl md:text-2xl font-medium"
-                            aria-label="Nowa agency rebrand"
-                          >
-                            Nowa
-                          </h3>
-                        </div>
-                        <div className="flex gap-2 flex-wrap justify-end">
-                          <Tag text="Visual identity" />
-                          <Tag text="UI UX" />
-                        </div>
-                      </div>
-                    </article>
-                  </Link>
-                </li>
-              </div>
-            </ul>
-          </div>
+            {/* NOWA */}
+            <li className=" group flex">
+              <Link href="/nowa" className="w-full">
+                <article className="w-full h-full flex flex-col">
+                  <Suspense fallback={<Skeleton />}>
+                    <div className="overflow-hidden rounded-md flex-1">
+                      <Image
+                        src={nowaLogo}
+                        className="w-full h-full group-hover:scale-105 transition-all object-cover"
+                        alt="nowa logotype"
+                      />
+                    </div>
+                  </Suspense>
+                  <div className="mt-2 flex justify-between items-start">
+                    <div className="flex justify-center items-center text-slate-100 group-hover:text-markblue transition-all">
+                      <h3
+                        className="tracking-tight  focus-visible:text-slate-100 text-xl md:text-2xl font-medium"
+                        aria-label="Nowa agency rebrand"
+                      >
+                        Nowa
+                      </h3>
+                    </div>
+                    <div className="flex gap-2 flex-wrap justify-end">
+                      <Tag text="Visual identity" />
+                      <Tag text="UI UX" />
+                    </div>
+                  </div>
+                </article>
+              </Link>
+            </li>
+            {/* </div> */}
+          </ul>
+          {/* </div> */}
         </section>
         {/* EXPERIENCE SECTION */}
         <section

@@ -10,11 +10,11 @@ import { Analytics } from "@vercel/analytics/react";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Mark Novak portfolio",
+  title: "Mark Novak portfolio website, showcasing his latest work",
   description:
     "Mark Novak is a designer and developer who builds accessible, inclusive products and digital experiences for the web.",
   openGraph: {
-    title: "Mark Novak portfolio",
+    title: "Mark Novak portfolio website, showcasing his latest work",
     description:
       "Mark Novak is a designer and developer who builds accessible, inclusive products and digital experiences for the web.",
     url: "https://novakmark.com/",

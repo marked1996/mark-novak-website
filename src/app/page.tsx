@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Tag from "@/components/Tag";
 import Footer from "@/components/Footer";
-import ootdVideo from "@/images/ootd/testootd.png";
+import coverPhoto from "@/images/soundwave/cover.jpg";
 import nowaLogo from "@/images/nowa/nowa logo.jpg";
 import itToolsMockup from "@/images/it-tools/home mockup.jpg";
 import { Suspense } from "react";
@@ -69,6 +69,35 @@ export default function Home() {
               </Link>
             </li>
             {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6"> */}
+            {/* SOUNDWAVE */}
+            <li className=" group flex">
+              <Link href="/soundwave" className="w-full">
+                <article className="w-full h-full flex flex-col">
+                  <Suspense fallback={<Skeleton />}>
+                    <div className="overflow-hidden rounded-md flex-1">
+                      <Image
+                        src={coverPhoto}
+                        className="w-full h-full group-hover:scale-105 transition-all object-cover"
+                        alt="Soundwave cover image"
+                      />
+                    </div>
+                  </Suspense>
+                  <div className="mt-2 flex justify-between items-start">
+                    <div className="flex justify-center items-center text-slate-100 group-hover:text-markblue transition-all">
+                      <h3
+                        className="tracking-tight  focus-visible:text-slate-100 text-xl md:text-2xl font-medium"
+                        aria-label="Nowa agency rebrand"
+                      >
+                        Soundwave
+                      </h3>
+                    </div>
+                    <div className="flex gap-2 flex-wrap justify-end">
+                      <Tag text="UI UX" />
+                    </div>
+                  </div>
+                </article>
+              </Link>
+            </li>
             {/* OOTD */}
             <li className=" group flex">
               <Link href="/ootd" className="w-full">

@@ -57,8 +57,8 @@ const Footer = () => {
             >
               Tailwind CSS
             </Link>
-          </span>
-          . All text is set in the Inter typeface.
+          </span>{" "}
+          by yours truly. All text is set in the Inter typeface.
         </p>
       </div>
     </footer>

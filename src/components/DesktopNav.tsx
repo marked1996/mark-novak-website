@@ -38,7 +38,8 @@ const DesktopNav = () => {
           <p className="mt-2">
             Building{" "}
             <Link
-              className="text-inter text-sm text-gray-100 hover:text-markblue transition-all"
+              target="_blank"
+              className="text-inter text-gray-100 hover:text-markblue transition-all"
               href="https://marked.lemonsqueezy.com/"
             >
               Framer templates.

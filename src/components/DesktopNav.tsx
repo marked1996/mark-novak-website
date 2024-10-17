@@ -35,6 +35,16 @@ const DesktopNav = () => {
           <p className="mt-4">
             I build pixel-perfect, engaging, and accessible digital experiences.
           </p>
+          <p className="mt-2">
+            Building{" "}
+            <Link
+              className="text-inter text-sm text-gray-100 hover:text-markblue transition-all"
+              href="https://marked.lemonsqueezy.com/"
+            >
+              Framer templates.
+            </Link>{" "}
+            No code. No drama.
+          </p>
           <Navigation />
         </div>
         <Cta />

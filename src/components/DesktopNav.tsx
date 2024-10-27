@@ -30,19 +30,19 @@ const DesktopNav = () => {
           </Link>
           {/* </div> */}
           <h2 className="mt-3 text-lg tracking-tight text-gray-100 sm:text-xl font-medium">
-            UI UX Designer & Front end developer
+            UI UX Designer
           </h2>
           <p className="mt-4">
             I build pixel-perfect, engaging, and accessible digital experiences.
           </p>
-          <p className="mt-2">
+          <p className="mt-2 hidden">
             Building{" "}
             <Link
               target="_blank"
               className="text-inter text-gray-100 hover:text-markblue transition-all"
               href="https://marked.lemonsqueezy.com/"
             >
-              Framer templates.
+              Framer templates in my free time.
             </Link>{" "}
             No code. No drama.
           </p>

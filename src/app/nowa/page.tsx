@@ -20,6 +20,7 @@ const Page = () => {
   return (
     <>
       <Image
+        priority={true}
         className="w-full max-h-cover mb-4"
         src={coverPhotoNowa}
         alt="Noxity developer tools mockup cover photo"

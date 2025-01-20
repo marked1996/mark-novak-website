@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import Tag from "@/components/Tag";
@@ -8,6 +9,7 @@ import itToolsMockup from "@/images/it-tools/home mockup.jpg";
 import { Suspense } from "react";
 import Skeleton from "@/components/Skeleton";
 import CollapsibleText from "@/components/CollapsibleText";
+import LockIcon from "@mui/icons-material/Lock";
 
 export default function Home() {
   return (
@@ -70,14 +72,24 @@ export default function Home() {
             </li>
             {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6"> */}
             {/* SOUNDWAVE */}
-            <li className=" group flex">
-              <Link href="/soundwave" className="w-full">
+            <li className=" group flex relative">
+              <Link
+                href="/soundwave"
+                className="w-full"
+                onClick={(e) => e.preventDefault()}
+                aria-disabled="true"
+              >
                 <article className="w-full h-full flex flex-col">
                   <Suspense fallback={<Skeleton />}>
                     <div className="overflow-hidden rounded-md flex-1">
+                      <div className="z-10 absolute inset-0 hidden group-hover:flex items-center justify-center rounded-md">
+                        <span className="text-slate-300 text-2xl">
+                          <LockIcon />
+                        </span>
+                      </div>
                       <Image
                         src={coverPhoto}
-                        className="w-full h-full group-hover:scale-105 transition-all object-cover"
+                        className="w-full h-full group-hover:scale-105 group-hover:opacity-40 transition-all object-cover"
                         alt="Soundwave cover image"
                       />
                     </div>

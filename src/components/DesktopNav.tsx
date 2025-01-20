@@ -35,7 +35,7 @@ const DesktopNav = () => {
           <p className="mt-4">
             I build pixel-perfect, engaging, and accessible digital experiences.
           </p>
-          <p className="mt-2 hidden">
+          {/* <p className="mt-2">
             Building{" "}
             <Link
               target="_blank"
@@ -45,7 +45,7 @@ const DesktopNav = () => {
               Framer templates in my free time.
             </Link>{" "}
             No code. No drama.
-          </p>
+          </p> */}
           <Navigation />
         </div>
         <Cta />

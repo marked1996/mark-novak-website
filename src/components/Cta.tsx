@@ -13,9 +13,9 @@ const Cta = () => {
       <div className="flex flex-wrap gap-4 pt-2 lg:pt-4">
         <Link
           className="text-sm text-gray-100 hover:text-markblue transition-all"
-          href="mailto:novakmark9@gmail.com"
+          href="mailto:meet.marknovak@gmail.com"
         >
-          novakmark9@gmail.com
+          meet.marknovak@gmail.com
         </Link>
         <Link
           className="text-sm text-gray-100 hover:text-markblue transition-all"

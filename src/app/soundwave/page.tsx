@@ -17,6 +17,7 @@ const Page = () => {
   return (
     <>
       <Image
+        priority={true}
         className="w-full max-h-cover mb-4"
         src={coverPhoto2}
         alt="Soundwave cover photo"
